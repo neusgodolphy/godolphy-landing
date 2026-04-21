@@ -305,6 +305,12 @@
       footer { flex-direction: column; text-align: center; }
       .footer-links { justify-content: center; }
     }
+
+@media (max-width: 640px) {
+  .hero-alerts-container { flex-direction: column !important; }
+  .hero-alerts-container .alerts-col { width: 100% !important; }
+  .hero-alerts-container .robot-col { width: 180px !important; order: -1 !important; }
+}
   </style>
 </head>
 <body>
@@ -324,10 +330,10 @@
   <p>Analizamos tus datos de citas, servicios y clientes para detectar automáticamente los problemas que te están costando dinero. Sin complicaciones.</p>
   <a href="https://dashboard.godolphy.com" class="btn-white">Empieza gratis →</a>
   <p class="hero-note">Sin tarjeta de crédito · Resultados en minutos</p>
-  <div style="display:flex; gap:24px; align-items:center; justify-content:center; max-width:860px; margin:60px auto 0; position:relative; z-index:1;">
+  <div class="hero-alerts-container" style="display:flex; gap:24px; align-items:center; justify-content:center; max-width:860px; margin:60px auto 0; position:relative; z-index:1; flex-wrap:wrap; padding:0 20px;">
   
   <!-- Módulos de alertas -->
-  <div style="display:flex; flex-direction:column; gap:12px; flex:1;">
+  <div class="alerts-col" style="display:flex; flex-direction:column; gap:12px; flex:1;">
     
     <div style="background:white; border-radius:14px; padding:12px 16px; display:flex; align-items:center; gap:14px; box-shadow:0 4px 20px rgba(0,0,0,0.08);">
       <div style="width:44px; height:44px; border-radius:50%; background:linear-gradient(135deg,#f87171,#ef4444); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
@@ -392,7 +398,7 @@
   </div>
 
   <!-- Personaje -->
-  <div style="flex-shrink:0; width:300px; display:flex; align-items:center; justify-content:center;">
+  <div class="robot-col" style="flex-shrink:0; width:300px; display:flex; align-items:center; justify-content:center; order:-1;">
     <img src="godolphy_personaje.png" alt="Godolphy" style="width:100%;">
   </div>
 
