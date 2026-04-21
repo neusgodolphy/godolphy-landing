@@ -30,20 +30,18 @@
     /* NAV */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
+      background: transparent;
       padding: 0 48px; height: 68px;
       display: flex; align-items: center; justify-content: space-between;
     }
-    .nav-logo img { height: 32px; }
+    .nav-logo img { height: 32px; filter: brightness(0) invert(1); }
     .nav-cta {
-      background: var(--brand); color: white;
+      background: white; color: var(--brand);
       text-decoration: none; padding: 11px 24px;
       border-radius: 50px; font-size: 15px; font-weight: 700;
       transition: background 0.2s, transform 0.15s;
     }
-    .nav-cta:hover { background: var(--brand-dark); transform: translateY(-1px); }
+    .nav-cta:hover { background: rgba(255,255,255,0.9); transform: translateY(-1px); }
 
     /* HERO */
     .hero {
