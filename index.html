@@ -34,7 +34,7 @@
       padding: 0 48px; height: 68px;
       display: flex; align-items: center; justify-content: space-between;
     }
-    .nav-logo img { height: 32px; }
+    .nav-logo img { height: 32px; filter: brightness(0) invert(1); }
     .nav-cta {
       background: white; color: var(--brand);
       text-decoration: none; padding: 11px 24px;
@@ -570,8 +570,10 @@
     const nav = document.querySelector('nav');
     if (window.scrollY > 10) {
       nav.style.background = '#621CFF';
+      nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.15)';
     } else {
       nav.style.background = 'transparent';
+      nav.style.boxShadow = 'none';
     }
   });
 </script>
